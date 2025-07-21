@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAFI LAW FIRM — PERCAYAKAN MASALAH HUKUM ANDA KEPADA KAMI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* General Styles */
+        :root {
+            --primary-dark: #1a1a1a; /* Soft Black for backgrounds */
+            --secondary-dark: #000000; /* Pure Black for strong elements */
+            --accent-gold: #D4AF37; /* Gold for accents */
+            --text-light: #F8F8F8; /* Off-white for light text */
+            --text-dark: #333333; /* Dark grey for general text */
+            --border-light: #444; /* Light border on dark backgrounds */
+            --border-dark: #E0E0E0; /* Dark border on light backgrounds */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--text-light); /* Off-white background */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: var(--secondary-dark); /* Black text on gold button */
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-weight: 600; /* Bolder for professional look */
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary:hover {
+            background-color: #E2C267; /* Slightly lighter gold on hover */
+            transform: translateY(-2px);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--secondary-dark); /* Black for headings */
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: 3.5em; }
+        h2 { font-size: 2.5em; }
+        h3 { font-size: 1.8em; }
+        h4 { font-size: 1.4em; }
+
+        p.section-subtitle {
+            font-size: 1.1em;
+            color: #555;
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent-gold); /* Gold for links */
+        }
+
+        a:hover {
+            color: var(--secondary-dark); /* Black on hover */
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 220px; /* Lebar tetap untuk teks */
+            height: 70px; /* Ukuran tetap */
+            bottom: 40px;
+            right: 40px;
+            background-color: #25D366; /* Standard WhatsApp green */
+            color: #fff;
+            border-radius: 35px; /* Bentuk kapsul */
+            text-align: center;
+            font-size: 18px; /* Ukuran font teks */
+            font-weight: 600; /* Tebal untuk konsistensi */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Rata tengah ikon dan teks */
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease; /* Transisi yang lebih halus */
+            padding: 0 20px; /* Padding untuk teks */
+            white-space: nowrap; /* Mencegah teks melipat */
+        }
+
+        .whatsapp-float i {
+            font-size: 32px; /* Ukuran ikon */
+            margin-right: 10px; /* Jarak antara ikon dan teks */
+        }
+
+        .whatsapp-float span {
+            display: inline-block; /* Pastikan teks terlihat */
+            opacity: 1; /* Pastikan teks terlihat */
+            font-size: 18px; /* Ukuran font teks */
+        }
+
+        .whatsapp-float:hover {
+            background-color: #1DA851; /* Darker green on hover */
+            transform: translateY(-2px); /* Efek sedikit naik */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Header */
+        .header {
+            background-color: var(--secondary-dark); /* Pure Black header */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            transition: background-color 0.3s ease;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .logo img {
+            max-width: 150px; /* Adjust as needed */
+            height: auto;
+            display: block;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .main-nav ul li {
+            margin-left: 30px;
+        }
+
+        .main-nav ul li a {
+            color: var(--text-light); /* White text for nav links */
+            font-weight: 500;
+            padding: 5px 0;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .main-nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-gold); /* Gold underline */
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        .main-nav ul li a:hover::after,
+        .main-nav ul li a.active::after {
+            width: 100%;
+        }
+
+        .main-nav ul li a:hover,
+        .main-nav ul li a.active {
+            color: var(--accent-gold); /* Gold on hover/active */
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 20px;
+        }
+
+        .hamburger .bar {
+            height: 3px;
+            width: 100%;
+            background-color: var(--text-light); /* White bars */
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 150px 20px;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5em;
+            margin-bottom: 20px;
+            color: #fff; /* White for main title */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1.1;
+        }
+        .hero-content h1 p { /* For the tagline below the main title */
+            font-size: 0.5em;
+            margin-top: 10px;
+            font-weight: 400;
+            color: var(--accent-gold); /* Gold for tagline */
+        }
+
+        .hero-content p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-section .btn {
+            font-size: 1.1em;
+            padding: 15px 40px;
+            border-radius: 50px;
+        }
+
+        /* About Section */
+        .about-section {
+            position: relative;
+            background-color: var(--text-light); /* Off-white background */
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            text-align: left;
+            margin-bottom: 30px;
+            font-size: 2.8em;
+            color: var(--secondary-dark);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* New style for the logo in About Section */
+        .about-logo {
+            display: block; /* Ensures it takes up its own line */
+            margin: 0 auto 30px auto; /* Centers it and adds space below */
+            max-width: 250px; /* Adjust size as needed */
+            height: auto;
+        }
+
+        /* Services Section */
+        .services-section {
+            background-color: var(--primary-dark); /* Dark background */
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .services-section h2 {
+            margin-bottom: 20px;
+            color: var(--accent-gold); /* Gold heading */
+        }
+
+        .services-section p.section-subtitle {
+            color: var(--text-light);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-item {
+            background-color: var(--secondary-dark); /* Pure Black for service items */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            border: 1px solid var(--border-light);
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            background-color: #333; /* Slightly lighter black on hover */
+        }
+
+        .service-icon {
+            font-size: 3em;
+            color: var(--accent-gold); /* Gold icon */
+            margin-bottom: 20px;
+        }
+
+        .service-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: var(--text-light); /* White for service item headings */
+        }
+
+        .service-item p {
+            font-size: 0.95em;
+            color: #bbb; /* Lighter grey for service item text */
+        }
+
+        /* Collaboration Section */
+        .collaboration-section {
+            background-color: var(--accent-gold); /* Gold background */
+            color: var(--secondary-dark);
+            text-align: center;
+        }
+
+        .collaboration-section h2, .collaboration-section .section-subtitle {
+            color: var(--secondary-dark); /* Black text on gold */
+        }
+
+        .collaboration-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .point-item {
+            background-color: rgba(0, 0, 0, 0.1); /* Slightly transparent black on gold */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.15);
+        }
+
+        .point-item:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .point-icon {
+            font-size: 3em;
+            color: var(--secondary-dark); /* Black icon on gold */
+            margin-bottom: 20px;
+        }
+
+        .point-item h3 {
+            font-size: 1.6em;
+            color: var(--secondary-dark);
+            margin-bottom: 15px;
+        }
+
+        .point-item p {
+            font-size: 0.95em;
+            color: #333; /* Darker text for readability */
+        }
+
+        /* Team Section */
+        .team-section {
+            text-align: center;
+            background-color: var(--text-light); /* Off-white background */
+        }
+
+        .team-section h2 {
+            margin-bottom: 20px;
+            color: var(--secondary-dark);
+        }
+
+        .team-section h3 {
+            margin-top: 60px;
+            margin-bottom: 30px;
+            font-size: 2em;
+            color: var(--primary-dark);
+            border-bottom: 2px solid var(--border-dark); /* Light grey border */
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Kolom lebih besar */
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .team-member {
+            background-color: #fff; /* Pure white background for members */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid var(--border-dark); /* Light border */
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            border-color: var(--accent-gold); /* Gold border on hover */
+        }
+
+        .team-member img {
+            width: 100%; /* Lebar gambar memenuhi container */
+            max-width: 600px; /* Maksimal lebar gambar */
+            height: 600px; /* Tinggi gambar tetap */
+            border-radius: 8px; /* Sudut sedikit melengkung seperti foto galeri */
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid var(--accent-gold); /* Gold border around image */
+            transition: border-color 0.3s ease;
+        }
+
+        .team-member:hover img {
+            border-color: var(--secondary-dark); /* Black border on hover */
+        }
+
+        .team-member h4 {
+            font-size: 1.3em;
+            margin-bottom: 5px;
+            color: var(--secondary-dark);
+        }
+
+        .team-member p.member-desc {
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 15px;
+            line-height: 1.4;
+            min-height: 40px; /* Ensure consistent height for descriptions */
+        }
+
+        /* Styles for the toggle functionality */
+        .team-member .full-description {
+            font-size: 0.85em;
+            color: #555;
+            text-align: justify;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid var(--border-dark);
+            display: none; /* Hidden by default */
+        }
+
+        .team-member .toggle-button {
+            background-color: var(--accent-gold);
+            color: var(--secondary-dark);
+            border: none;
+            padding: 8px 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .team-member .toggle-button:hover {
+            background-color: #E2C267;
+        }
+        /* End of styles for toggle functionality */
+
+        /* Experience Section */
+        .experience-section {
+            background-color: var(--primary-dark); /* Dark background */
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .experience-section h2 {
+            color: var(--accent-gold);
+        }
+        .experience-section p.section-subtitle {
+            color: var(--text-light);
+        }
+
+
+        .experience-list {
+            list-style: none;
+            text-align: left;
+            max-width: 800px;
+            margin: 50px auto 0 auto;
+            padding-left: 0;
+        }
+
+        .experience-list li {
+            background-color: var(--secondary-dark); /* Pure Black for list items */
+            color: var(--text-light);
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            font-size: 1.05em;
+            position: relative;
+            padding-left: 45px; /* Space for icon */
+            border: 1px solid var(--border-light);
+        }
+
+        .experience-list li::before {
+            content: "\f00c"; /* Check icon */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent-gold); /* Gold checkmark */
+            font-size: 1.2em;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background-color: var(--text-light); /* Off-white background */
+            color: var(--text-dark);
+            text-align: center;
+        }
+
+        .testimonials-section h2 {
+            color: var(--secondary-dark);
+        }
+        .testimonials-section p.section-subtitle {
+            color: #555;
+        }
+
+        .testimonial-wrapper {
+            position: relative;
+            max-width: 1000px;
+            margin: 50px auto 0 auto;
+            overflow: hidden;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-item {
+            background-color: #fff; /* White background for testimonial cards */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            text-align: left;
+            border: 1px solid var(--border-dark);
+        }
+
+        .testimonial-item p {
+            font-size: 1.05em;
+            margin-bottom: 20px;
+            font-style: italic;
+            color: #444;
+        }
+
+        .client-info h4 {
+            margin: 0;
+            font-size: 1.1em;
+            color: var(--secondary-dark);
+        }
+
+        .client-info span {
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /* Clients Section */
+        .clients-section {
+            background-color: var(--primary-dark); /* Dark background */
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .clients-section h2 {
+            color: var(--accent-gold);
+        }
+        .clients-section p.section-subtitle {
+            color: var(--text-light);
+        }
+
+        .clients-section h3 {
+            margin-top: 60px;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+            color: var(--text-light); /* White for sub-headings */
+            border-bottom: 2px solid var(--border-light);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .partner-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px auto 60px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 900px;
+        }
+
+        .partner-list li {
+            background-color: var(--secondary-dark); /* Black background for partners */
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            color: var(--text-light);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-light);
+        }
+
+        .client-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .client-logos span {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: var(--accent-gold); /* Gold text for client names */
+            padding: 15px 25px;
+            border: 2px solid var(--accent-gold);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .client-logos span:hover {
+            background-color: var(--accent-gold);
+            color: var(--secondary-dark); /* Black text on gold hover */
+        }
+
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--text-light); /* Off-white background */
+            text-align: center;
+        }
+
+        .faq-accordion {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: left;
+        }
+
+        .faq-item {
+            background-color: #fff; /* White background for FAQ items */
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            border: 1px solid var(--border-dark);
+        }
+
+        .faq-question {
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background-color: #fff;
+            border-bottom: 1px solid var(--border-dark);
+        }
+        .faq-item:last-child .faq-question {
+            border-bottom: none;
+        }
+
+
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.1em;
+            color: var(--secondary-dark);
+            flex-grow: 1;
+        }
+
+        .faq-question .toggle-icon {
+            font-size: 1.2em;
+            color: var(--accent-gold); /* Gold icon */
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 25px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* Adjust as needed for content */
+            padding: 20px 25px;
+        }
+
+        .faq-answer p {
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            background-color: var(--secondary-dark); /* Pure Black background */
+            text-align: center;
+        }
+
+        .gallery-section h2 {
+            color: var(--accent-gold);
+        }
+        .gallery-section p.section-subtitle {
+            color: var(--text-light);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            border: 2px solid var(--border-light); /* Light border */
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            border-color: var(--accent-gold); /* Gold border on hover */
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--primary-dark); /* Dark background */
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        .contact-section h2, .contact-section p.section-subtitle {
+            color: var(--accent-gold); /* Gold for headings */
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .contact-info h3, .contact-form h3 {
+            color: var(--text-light); /* White for sub-headings */
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info p i {
+            margin-right: 15px;
+            color: var(--accent-gold); /* Gold icons */
+            font-size: 1.3em;
+            width: 30px;
+        }
+
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            color: var(--text-light); /* White icons */
+            font-size: 1.8em;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-gold); /* Gold on hover */
+        }
+
+        .map-container {
+            margin-top: 40px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-light);
+        }
+
+        .map-container iframe {
+            border: 0;
+            width: 100%;
+            height: 350px;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-light); /* Light border on dark input */
+            background-color: var(--secondary-dark); /* Black background for input */
+            color: var(--text-light);
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            border-color: var(--accent-gold); /* Gold border on focus */
+            outline: none;
+        }
+
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .contact-form .btn {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1em;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--secondary-dark); /* Pure Black footer */
+            color: #ccc;
+            padding: 60px 0 20px 0;
+            font-size: 0.9em;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: var(--accent-gold); /* Gold for footer headings */
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+
+        .footer-col p {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-gold); /* Gold on hover */
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-light); /* Light border on dark background */
+            padding-top: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom p {
+            margin: 10px 0;
+        }
+
+        .footer-bottom .social-links {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .footer-bottom .social-links a {
+            font-size: 1.3em;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 3.5em;
+            }
+            .hero-content h1 p {
+                font-size: 0.6em;
+            }
+
+            .about-grid, .contact-content {
+                grid-template-columns: 1fr;
+            }
+            .about-image {
+                order: -1; /* Image appears above text on smaller screens */
+            }
+            .about-text h2 {
+                text-align: center;
+            }
+            .about-text p {
+                text-align: left; /* Keep text justified */
+            }
+
+            .main-nav {
+                position: absolute;
+                top: 80px; /* Below header */
+                left: 0;
+                width: 100%;
+                background-color: var(--secondary-dark); /* Black background for mobile nav */
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                flex-direction: column;
+                display: none;
+                padding: 20px 0;
+            }
+            .main-nav.active {
+                display: flex;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+            .main-nav ul li {
+                margin: 10px 0;
+            }
+            .main-nav ul li a {
+                padding: 10px 0;
+                display: block;
+                color: var(--text-light); /* White text on mobile nav */
+            }
+            .main-nav ul li a:hover,
+            .main-nav ul li a.active {
+                color: var(--accent-gold); /* Gold on hover/active */
+            }
+
+
+            .hamburger {
+                display: flex;
+            }
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+            .footer-bottom .social-links {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 60px 0;
+            }
+            h1 { font-size: 2.8em; }
+            h2 { font-size: 2em; }
+            h3 { font-size: 1.6em; }
+            .hero-content h1 {
+                font-size: 3em;
+            }
+            .hero-content h1 p {
+                font-size: 0.5em;
+            }
+            .hero-content p {
+                font-size: 1.1em;
+            }
+            .btn {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+            .service-grid, .team-grid, .testimonial-grid, .collaboration-points, .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 200px; /* Mengurangi lebar pada mobile */
+                height: 55px; /* Mengurangi tinggi pada mobile */
+                font-size: 16px;
+                border-radius: 27.5px; /* Menyesuaikan radius */
+            }
+            .whatsapp-float i {
+                font-size: 28px; /* Mengurangi ukuran ikon pada mobile */
+            }
+            .whatsapp-float span {
+                font-size: 16px; /* Mengurangi ukuran teks pada mobile */
+            }
+            .team-member img {
+                height: 250px; /* Mengurangi tinggi gambar advokat pada mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1.8em; }
+            .hero-content h1 {
+                font-size: 2.5em;
+            }
+            .hero-content h1 p {
+                font-size: 0.45em;
+            }
+            .hero-content p {
+                font-size: 1em;
+            }
+            .about-text p {
+                font-size: 0.95em;
+            }
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            .faq-question h3 {
+                font-size: 1em;
+            }
+            .contact-content {
+                gap: 40px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer-col ul {
+                text-align: center;
+                margin-top: 10px;
+            }
+            .footer-col ul li {
+                display: inline-block;
+                margin: 0 8px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/6281553333881" class="whatsapp-float" target="_blank" aria-label="WhatsApp Konsultasi Gratis">
+        <i class="fab fa-whatsapp"></i> <span>Konsultasi Gratis</span>
+    </a>
+
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="1000748552.png" alt="Logo KAFI LAW FIRM">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero" class="active">Beranda</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="#team">Tim Kami</a></li>
+                    <li><a href="#testimonials">Testimoni</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#gallery">Galeri</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>KAFI LAW FIRM <p>PERCAYAKAN MASALAH HUKUM ANDA KEPADA KAMI</p> </h1>
+            <p>"Fiat Justitia Ruat Caelum" – Hendaklah keadilan ditegakkan walau langit runtuh. Kami menjunjung tinggi nilai keadilan sebagai fondasi utama.</p>
+            <a href="#contact" class="btn btn-primary">Konsultasi Gratis</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <img src="1000749362.jpg" alt="Logo KAFI LAW FIRM di Tentang Kami" class="about-logo">
+                    <h2>Tentang KAFI LAW FIRM</h2>
+                    <p><strong>KAFI LAW FIRM</strong> terdaftar secara resmi di Kementerian Hukum dan HAM Republik Indonesia dengan Nomor: AHU-0001016-AH.01.18 Tahun 2025 tertanggal 20 Juni 2025 dan berkedudukan di KOMPLEK PATRA 2 Jalan Ahmad Yani No. 57 RT. 015 RW. 003 Kelurahan Cempaka Putih Timur, Kecamatan Cempaka Putih, Kota Jakarta Pusat adalah kantor yang bergerak di bidang jasa profesi hukum, baik yang bersifat litigasi/sebagai representasi di muka pengadilan, maupun non litigasi/diluar pengadilan. Berdiri sejak tahun 2018 dan sampai saat ini telah berhasil menangani dan menyelesaikan berbagai perkara baik yang bersifat litigasi maupun yang bersifat non litigasi, dalam perkara Pidana, Perdata, Peradilan Tata Usaha Negara, Peradilan Agama, Ketenagakerjaan, Kepailitan dan lain-lain serta mampu memberikan jasa layanan hukum bagi klien-kliennya dalam beragam bentuk, konsultasi, perwakilan, pertemuan dan lain-lain.</p>
+
+                    <p>Dalam bidang pelayanan hukum, <strong>KAFI LAW FIRM</strong> telah memiliki seluruh potensi dan sumber daya yang memadai untuk memenuhi dan melindungi kepentingan klien dari tindakan-tindakan yudisial dan non yudisial di hadapan pengadilan dan lembaga lembaga peradilan lainnya. Sedangkan dalam bidang corporate, <strong>KAFI LAW FIRM</strong> memfokuskan diri pada masalah-masalah hukum bisnis yang dihadapi oleh para klien, seperti hukum perusahaan, keuangan dan perbankan, restrukturisasi utang, investasi dan produk-produk derivatif lainnya, teknologi informasi dan telekomunikasi, hak milik intelektual, kesehatan, industri pertambangan, minyak dan gas, pengembangan properti, konstruksi kepailitan dan lain-lain.</p>
+
+                    <p>Eksistensi dan perkembangan <strong>KAFI LAW FIRM</strong> tersebut tentu saja tidak serta merta terjadi begitu saja, semuanya tidak lepas dari dukungan dan peran serta seluruh komponen yang saling bahu-membahu menciptakan suatu keharmonisan dalam lingkungan kerja yang dinamis yang ditunjang oleh keberadaan advokat yang handal dalam berbagai bidang hukum dan sudah sangat berpengalaman dalam menangani berbagai perkara baik yang bersifat litigasi maupun non litigasi dan beracara di semua jenis dan tingkatan Pengadilan.</p>
+                </div>
+                <div class="about-image">
+                    <img src="kantor-kafi-law-firm.jpg" alt="Kantor KAFI LAW FIRM">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section section-padding">
+        <div class="container">
+            <h2>Ruang Lingkup & Layanan Jasa Hukum</h2>
+            <p class="section-subtitle">Kami memberikan layanan di berbagai aspek hukum, meliputi bidang keahlian utama:</p>
+            <div class="service-grid">
+                <div class="service-item">
+                    <i class="fas fa-building service-icon"></i>
+                    <h3>Hukum Perusahaan & Korporasi</h3>
+                    <p>Mencakup pembentukan, tata kelola, merger, akuisisi, dan kepatuhan korporasi.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-balance-scale-left service-icon"></i>
+                    <h3>Persaingan Usaha</h3>
+                    <p>Pendampingan dalam isu anti-monopoli dan persaingan usaha yang sehat.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-money-check-alt service-icon"></i>
+                    <h3>Keuangan & Perbankan</h3>
+                    <p>Nasihat hukum terkait transaksi keuangan, perbankan, dan regulasi keuangan.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <h3>Pasar Modal</h3>
+                    <p>Pendampingan hukum untuk penawaran umum, investasi, dan kepatuhan pasar modal.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-hand-holding-usd service-icon"></i>
+                    <h3>Hukum Penanaman Modal</h3>
+                    <p>Bantuan hukum bagi investor lokal maupun asing dalam penanaman modal.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-first-aid service-icon"></i>
+                    <h3>Kesehatan & Medis</h3>
+                    <p>Nasihat hukum untuk rumah sakit, praktisi medis, dan regulasi kesehatan.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-hard-hat service-icon"></i>
+                    <h3>Konstruksi</h3>
+                    <p>Pendampingan hukum dalam proyek konstruksi, kontrak, dan sengketa.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-gavel service-icon"></i>
+                    <h3>Kepailitan & Restrukturisasi</h3>
+                    <p>Penanganan kasus kepailitan, penundaan kewajiban pembayaran utang, dan restrukturisasi.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-lightbulb service-icon"></i>
+                    <h3>Hak Kekayaan Intelektual (HKI)</h3>
+                    <p>Perlindungan merek, paten, hak cipta, dan rahasia dagang.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-leaf service-icon"></i>
+                    <h3>Hukum Lingkungan</h3>
+                    <p>Kepatuhan regulasi lingkungan, izin, dan penanganan sengketa lingkungan.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-oil-can service-icon"></i>
+                    <h3>Pertambangan, Minyak & Gas</h3>
+                    <p>Nasihat hukum terkait perizinan, kontrak, dan sengketa di sektor ini.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-home service-icon"></i>
+                    <h3>Properti & Real Estate</h3>
+                    <p>Transaksi properti, sengketa tanah, dan pengembangan real estate.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-users service-icon"></i>
+                    <h3>Ketenagakerjaan & Hubungan Industrial</h3>
+                    <p>Perselisihan kerja, penyusunan perjanjian kerja, dan peraturan perusahaan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="collaboration" class="collaboration-section section-padding">
+        <div class="container">
+            <h2>Penawaran Kerja Sama</h2>
+            <p class="section-subtitle">Kami terbuka untuk kerja sama hukum baik dengan individu, perusahaan, institusi swasta maupun lembaga pemerintahan. Kerja sama dapat disesuaikan dengan kebutuhan, baik melalui retainer contract maupun perkasus.</p>
+            <div class="collaboration-points">
+                <div class="point-item">
+                    <i class="fas fa-handshake point-icon"></i>
+                    <h3>Retainer Contract</h3>
+                    <p>Kerja sama jangka panjang untuk kebutuhan konsultasi dan pendampingan hukum berkelanjutan.</p>
+                </div>
+                <div class="point-item">
+                    <i class="fas fa-file-contract point-icon"></i>
+                    <h3>Kerja Sama Perkasus</h3>
+                    <p>Penanganan masalah hukum spesifik berdasarkan kasus per kasus dengan fokus pada solusi efektif.</p>
+                </div>
+                <div class="point-item">
+                    <i class="fas fa-info-circle point-icon"></i>
+                    <h3>Ketentuan Jelas</h3>
+                    <p>Meliputi transparansi biaya, komitmen profesionalitas, dan fleksibilitas pendekatan hukum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team-section section-padding">
+        <div class="container">
+            <h2>Profil Tim Hukum</h2>
+            <p class="section-subtitle">Tim kami terdiri dari advokat-advokat berdedikasi tinggi dengan keahlian beragam, siap memberikan layanan hukum terbaik.</p>
+
+            <h3>Advokat Utama</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="karunia-fitriadi.jpg" alt="Karunia Fitriadi">
+                    <h4>KARUNIA FITRIADI, SH., MH., C.Med.</h4>
+                    <p class="member-desc">Advokat Utama (Managing Partners)</p>
+                    <div class="full-description">
+                        Lahir 11 Juli 1983 di Jakarta, beliau menempuh pendidikan di Fakultas Hukum Universitas Ibnu Chaldun Jakarta dan meraih Magister Hukum di Universitas Jayabaya Jakarta. Mulai berprofesi advokat sejak 2018. Beliau juga Wakil Direktur Lembaga Bantuan Hukum Bang Japar (LBH BANG JAPAR) dan Pengurus Perhimpunan Advokat Indonesia (PERADI) Cabang Jakarta Timur. Berpengalaman luas dalam perkara Litigasi maupun Non Litigasi (Pidana, Perdata, TUN, Agama, Ketenagakerjaan, Kepailitan, dll.) serta sebagai Mediator Non-Hakim. Aktif di berbagai organisasi profesi, kepemudaan, dan kemasyarakatan.
+                    </div>
+                    <button class="toggle-button">Lihat Selengkapnya</button>
+                </div>
+                <div class="team-member">
+                    <img src="rizky-rismawan.jpg" alt="Rizky Rismawan">
+                    <h4>RIZKY RISMAWAN, SH., MH., C.T.L., C.L.A.</h4>
+                    <p class="member-desc">Advokat Utama</p>
+                    <div class="full-description">
+                        Lahir 18 Oktober 1988 di Bandung, beliau menyelesaikan studi di Fakultas Hukum Universitas Pasundan dan meraih Magister Hukum di Universitas Jayabaya Jakarta. Mulai menekuni profesi advokat sejak 2015. Selain advokat dan kurator di KAFI LAW FIRM, beliau juga Pengacara Pajak dan Kuasa Hukum Pengadilan Pajak. Tercatat sebagai Auditor Hukum dan aktif di organisasi seperti BBKH (Biro Bantuan Konsultasi Hukum) Universitas Pasundan dan LKH RPR Jawa Barat.
+                    </div>
+                    <button class="toggle-button">Lihat Selengkapnya</button>
+                </div>
+                <div class="team-member">
+                    <img src="arnoldi-maruao.jpg" alt="Arnoldi Maru’ao">
+                    <h4>ARNOLDI MARU'AO, SH.</h4>
+                    <p class="member-desc">Advokat Utama (Partners)</p>
+                    <div class="full-description">
+                        Lahir 15 Oktober 1990 di Halamona/Nias, beliau menyelesaikan studi di Fakultas Hukum Universitas Singaperbangsa (UNISKA) Karawang. Mulai berprofesi advokat sejak 2018 dan bergabung sebagai Partners di KAFI LAW FIRM sejak 2020. Sangat berpengalaman dalam menyelesaikan perkara Litigasi maupun Non Litigasi (Pidana, Perdata, Agama, Ketenagakerjaan, Kepailitan, dll.). Aktif di berbagai organisasi profesi, kepemudaan, dan kemasyarakatan.
+                    </div>
+                    <button class="toggle-button">Lihat Selengkapnya</button>
+                </div>
+                <div class="team-member">
+                    <img src="asepudin.jpg" alt="Asepudin">
+                    <h4>ASEPU DIN, SH.I.</h4>
+                    <p class="member-desc">Advokat Utama (Partners)</p>
+                    <div class="full-description">
+                        Lahir 19 Juli 1982 di Bogor, beliau meraih gelar sarjana S1 Hukum Pidana Islam di Universitas Negeri Sunan Gunung Djati Bandung. Memiliki latar belakang pengusaha supplier bahan-bahan pokok. Bergabung sebagai Partners di KAFI LAW FIRM sejak 2020. Berpengalaman dalam menyelesaikan perkara Litigasi maupun Non Litigasi (Pidana, Perdata, Agama, Ketenagakerjaan, Kepailitan, dll.) serta membuat dan menganalisis kontrak/perjanjian.
+                    </div>
+                    <button class="toggle-button">Lihat Selengkapnya</button>
+                </div>
+            </div>
+
+            <h3>Paralegal Profesional</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="nana-ulana.jpg" alt="Nana Ulana">
+                    <h4>NANA ULANA, C.PAR., C.LOP.</h4>
+                    <p class="member-desc">Paralegal Profesional</p>
+                    <div class="full-description">
+                        Lahir 24 Januari 1993 di Jakarta, beliau menyelesaikan pendidikan Sekolah Menengah Atas di SMA Negeri 31 Jakarta dan melanjutkan studi di Fakultas Hukum Universitas Terbuka (UT) Jakarta. Mengikuti pendidikan hukum non-formal (Paralegal) pada 2024 dan Legal Opinion Practition di ESAS Management pada 2024. Bergabung sebagai Paralegal di KAFI LAW FIRM sejak 2019. Berpengalaman dalam tugas pemberkasan dan pengendalian data, serta Komandan Kecamatan Pulo Gadung organisasi kemasyarakatan Bang Japar.
+                    </div>
+                    <button class="toggle-button">Lihat Selengkapnya</button>
+                </div>
+                <div class="team-member">
+                    <img src="yusuf-effendi.jpg" alt="Yusuf Effendi">
+                    <h4>YUSUF EFFENDI</h4>
+                    <p class="member-desc">Paralegal</p>
+                    <div class="full-description">
+                        Lahir 16 Maret 1970 di Jakarta, menyelesaikan pendidikan SLTA di Madrasah Aliyah Negeri Rejoso Peterongan Jombang dan mengikuti pendidikan hukum non-formal (Paralegal) pada 2025. Mulai bergabung sebagai Paralegal di KAFI LAW FIRM sejak 2024. Juga tergabung dalam organisasi kemasyarakatan REKIN (Relawan Kita Indonesia) dan menjabat sebagai LMK di RW. 08 Kelurahan Lubang Buaya, Jakarta Timur.
+                    </div>
+                    <button class="toggle-button">Lihat Selengkapnya</button>
+                </div>
+                <div class="team-member">
+                    <img src="cholid.jpg" alt="Cholid">
+                    <h4>CHOLID</h4>
+                    <p class="member-desc">Paralegal</p>
+                    <div class="full-description">
+                        Lahir 29 September 1979 di Kebumen, beliau menyelesaikan pendidikan hukum non-formal Paralegal pada 2024 dan sedang melanjutkan pendidikan di Fakultas Hukum Universitas Terbuka (UT) Jakarta. Bergabung sebagai Paralegal di KAFI LAW FIRM sejak 2019. Berpengalaman di bidang koperasi, sales manager, dan terapis soul and body healing.
+                    </div>
+                    <button class="toggle-button">Lihat Selengkapnya</button>
+                </div>
+            </div>
+
+            <h3>Staff Legal & IT Support</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="mentari-minerva.jpg" alt="Muhammad Mentari Minerva">
+                    <h4>MUHAMMAD MENTARI MINERVA, S.Kom.</h4>
+                    <p class="member-desc">Staff Legal & IT Support</p>
+                    <div class="full-description">
+                        Lahir 17 Desember 1988 di Bekasi, beliau meraih gelar S.Kom. di Universitas Prof. Dr. Moestopo. Pernah berkecimpung di dunia kesehatan dan sosial. Bergabung di KAFI LAW FIRM pada 2024. Profesional dalam memberikan nasihat (advice) kepada klien dengan pendekatan solutif dan humanis. Memiliki pengalaman dalam konsultasi hukum, menyusun dokumen legal, serta mewakili dan mendampingi klien dalam proses mediasi maupun litigasi.
+                    </div>
+                    <button class="toggle-button">Lihat Selengkapnya</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="experience" class="experience-section section-padding">
+        <div class="container">
+            <h2>Pengalaman Penanganan Perkara</h2>
+            <p class="section-subtitle">Kami telah menangani berbagai perkara hukum yang kompleks dan beragam, baik perdata maupun pidana.</p>
+            <ul class="experience-list">
+                <li>Penanganan berbagai perkara besar seperti Perkara 378, 310, 372, ITE di wilayah Polres/Polda (Jakarta Utara, Sumsel, Metro Jaya).</li>
+                <li>Penanganan Perkara 39a tentang Perpajakan di Pengadilan Negeri Jakarta Timur.</li>
+                <li>Pendampingan perkara Hak Kekayaan Intelektual (HKI) yang kompleks.</li>
+                <li>Pendampingan WNA (Warga Negara Asing) dengan hasil putusan bebas yang menguntungkan klien.</li>
+                <li>Dan berbagai perkara hukum lainnya yang melibatkan sengketa perdata, pidana, tata usaha negara, dan arbitrase.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section section-padding">
+        <div class="container">
+            <h2>Apa Kata Klien Kami</h2>
+            <p class="section-subtitle">Dengarkan pengalaman nyata dari klien-klien yang telah merasakan layanan profesional kami.</p>
+            <div class="testimonial-wrapper">
+                <div class="testimonial-grid">
+                    <div class="testimonial-item">
+                        <p>"Pelayanan KAFI LAW FIRM sangat profesional dan responsif. Mereka membantu menyelesaikan masalah hukum kami dengan cepat dan efisien."</p>
+                        <div class="client-info">
+                            <h4>Budi Santoso</h4>
+                            <span>Direktur PT. Maju Jaya</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"Sangat puas dengan konsultasi yang diberikan. Penjelasan yang jelas dan strategi hukum yang tepat sasaran."</p>
+                        <div class="client-info">
+                            <h4>Siti Aminah</h4>
+                            <span>Wiraswasta</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"KAFI LAW FIRM adalah pilihan terbaik untuk pendampingan hukum. Timnya berdedikasi dan sangat kompeten."</p>
+                        <div class="client-info">
+                            <h4>Agus Widodo</h4>
+                            <span>Manajer Keuangan</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"Mereka tidak hanya memberikan solusi hukum, tetapi juga kepastian dan ketenangan pikiran. Sangat direkomendasikan."</p>
+                        <div class="client-info">
+                            <h4>Maria Theresia</h4>
+                            <span>Praktisi Medis</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"Tim advokat yang hebat! Penanganan kasus kami berjalan lancar berkat keahlian mereka."</p>
+                        <div class="client-info">
+                            <h4>Faisal Rahman</h4>
+                            <span>Pengusaha Properti</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"Saya sangat menghargai integritas dan etika profesional yang ditunjukkan oleh KAFI LAW FIRM."</p>
+                        <div class="client-info">
+                            <h4>Dewi Lestari</h4>
+                            <span>Konsultan</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"Bantuan hukum yang sangat efektif dan hasil yang memuaskan. Terima kasih KAFI LAW FIRM!"</p>
+                        <div class="client-info">
+                            <h4>Joko Susilo</h4>
+                            <span>Karyawan Swasta</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients" class="clients-section section-padding">
+        <div class="container">
+            <h2>Rekanan & Klien</h2>
+            <p class="section-subtitle">Kami bangga dengan jaringan rekan kerja profesional dan kepercayaan yang diberikan oleh berbagai perusahaan terkemuka.</p>
+            <h3>Rekan Kerja Profesional</h3>
+            <ul class="partner-list">
+                <li>Notaris Ryan Bayu Chandra, SH., MKn</li>
+                <li>Notaris Uus Sumirat, SH</li>
+                <li>Kantor Hukum: Key & Bar</li>
+                <li>Kantor Hukum: Arjuna Law Firm</li>
+                <li>Kantor Hukum: TM & Rekan</li>
+                <li>Kantor Hukum: API & Partners</li>
+                <li>Kantor Hukum: RALF</li>
+                <li>Kantor Hukum: Sastradikarya</li>
+                <li>LBH: Bang Japar</li>
+                <li>LBH: LBH LEM DKI</li>
+            </ul>
+
+            <h3>Perusahaan yang Telah Bekerja Sama</h3>
+            <div class="client-logos">
+                <span>PT. Morita Tjokro Gearindo</span>
+                <span>PT. White Music</span>
+                <span>PT. Jakarta Martin Logamindo</span>
+                <span>PT. Mitra Pelangi Sejahtera</span>
+                <span>PT. Kaltim Mitra Persada</span>
+                <span>PT. Haru Media Sejahtera</span>
+                <span>PT. Melvana Media Indonesia</span>
+                <span>PT. Word Music Indonesia</span>
+                <span>dan banyak lainnya</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section section-padding">
+        <div class="container">
+            <h2>Pertanyaan yang Sering Diajukan (FAQ)</h2>
+            <p class="section-subtitle">Temukan jawaban atas pertanyaan umum seputar layanan hukum dan proses kerja kami.</p>
+
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>1. Bagaimana cara mengajukan konsultasi awal dengan KAFI LAW FIRM?</h3>
+                        <i class="fas fa-plus toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Anda dapat mengajukan konsultasi awal dengan menghubungi kami melalui telepon/WhatsApp di 0815 5333 3881 atau mengirim email ke kafilawfirm2019@gmail.com. Tim kami akan segera merespons untuk menjadwalkan pertemuan.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>2. Apa saja bidang hukum yang menjadi spesialisasi KAFI LAW FIRM?</h3>
+                        <i class="fas fa-plus toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kami memiliki spesialisasi luas meliputi Hukum Perusahaan & Korporasi, Persaingan Usaha, Keuangan & Perbankan, Pasar Modal, Hukum Penanaman Modal, Kesehatan & Medis, Konstruksi, Kepailitan & Restrukturisasi, Hak Kekayaan Intelektual (HKI), Hukum Lingkungan, Pertambangan, Minyak & Gas, Properti & Real Estate, serta Ketenagakerjaan & Hubungan Industrial.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>3. Apakah KAFI LAW FIRM melayani individu atau hanya perusahaan?</h3>
+                        <i class="fas fa-plus toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kami melayani baik individu maupun perusahaan, institusi swasta, dan lembaga pemerintahan. Pendekatan kami disesuaikan dengan kebutuhan klien.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>4. Bagaimana struktur biaya layanan hukum di KAFI LAW FIRM?</h3>
+                        <i class="fas fa-plus toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kami menawarkan dua opsi kerja sama: retainer contract untuk pendampingan berkelanjutan, dan perkasus untuk penanganan masalah hukum spesifik. Struktur biaya akan dijelaskan secara transparan di awal berdasarkan kompleksitas dan jenis layanan yang dibutuhkan.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>5. Bisakah saya bertemu langsung dengan tim advokat sebelum memutuskan?</h3>
+                        <i class="fas fa-plus toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tentu. Kami sangat menganjurkan pertemuan awal untuk membahas kasus Anda dan untuk Anda mengenal lebih dekat tim kami. Silakan hubungi kami untuk menjadwalkan pertemuan.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>6. Apa yang membedakan KAFI LAW FIRM dari firma hukum lain?</h3>
+                        <i class="fas fa-plus toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kami menjunjung tinggi integritas, profesionalisme, dan dedikasi dalam setiap penanganan kasus. Tim kami terdiri dari advokat berpengalaman di berbagai bidang hukum, berkomitmen memberikan solusi komprehensif, akurat, dan terpercaya dengan pendekatan personal.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>7. Bagaimana proses penanganan kasus setelah saya menjadi klien?</h3>
+                        <i class="fas fa-plus toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Setelah Anda menjadi klien, kami akan melakukan analisis mendalam terhadap kasus Anda, merumuskan strategi hukum yang paling efektif, dan memberikan pendampingan serta representasi yang konsisten di setiap tahapan proses hukum.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>8. Apakah KAFI LAW FIRM juga menyediakan layanan mediasi?</h3>
+                        <i class="fas fa-plus toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ya, salah satu advokat utama kami, Karunia Fitriadi, adalah mediator tersertifikasi. Kami menyediakan layanan mediasi untuk penyelesaian sengketa di luar pengadilan.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>9. Bagaimana saya bisa melihat rekam jejak atau portofolio kasus yang pernah ditangani?</h3>
+                        <i class="fas fa-plus toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Anda dapat melihat ringkasan pengalaman penanganan perkara kami di bagian "Pengalaman Penanganan Perkara" di website ini. Untuk detail lebih lanjut, kami bisa membahasnya dalam konsultasi awal.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>10. Apakah ada layanan hukum untuk Warga Negara Asing (WNA)?</h3>
+                        <i class="fas fa-plus toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ya, kami memiliki pengalaman dalam mendampingi Warga Negara Asing (WNA) dalam berbagai perkara hukum di Indonesia, termasuk kasus dengan hasil putusan bebas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="gallery" class="gallery-section section-padding">
+        <div class="container">
+            <h2>Galeri & Dokumentasi</h2>
+            <p class="section-subtitle">Tersedia dokumentasi berbagai kegiatan hukum dan profesionalisme tim kami.</p>
+            <div class="gallery-grid">
+                <img src="kegiatan-hukum-1.jpg" alt="Kegiatan Hukum 1">
+                <img src="kantor-internal.jpg" alt="Kantor Internal">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <h2>Kontak Kami</h2>
+            <p class="section-subtitle">Jangan ragu untuk menghubungi kami untuk konsultasi awal atau pertanyaan lebih lanjut.</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Informasi Kontak</h3>
+                    <p><i class="fab fa-whatsapp"></i> WhatsApp / Telepon: 0815 5333 3881</p>
+                    <p><i class="fas fa-envelope"></i> Email: kafilawfirm2019@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Komplek PATRA 2, Jl. Ahmad Yani No. 57 RT. 015 RW. 003, Kelurahan Cempaka Putih Timur, Kecamatan Cempaka Putih, Jakarta Pusat 10510</p>
+                    <p><i class="fas fa-clock"></i> Senin - Jumat: 09:00 - 17:00 WIB</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3687258079087!2d106.8617887!3d-6.2163991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f41b2c4c8101%3A0xc3f8e5b4b1d5a7d!2sKomplek%20Patra%202!5e0!3m2!1sen!2sid!4v1701389025000!5m2!1sen!2sid"
+                            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Kirim Pesan kepada Kami</h3>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" required placeholder="Nama Anda">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Email Anda">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subjek</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Subjek Pesan">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan Anda</label>
+                            <textarea id="message" name="message" required placeholder="Tulis pesan Anda di sini..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>KAFI LAW FIRM</h3>
+                <p>"Fiat Justitia Ruat Caelum" – Hendaklah keadilan ditegakkan walau langit runtuh. Kami menjunjung tinggi nilai keadilan sebagai fondasi utama.</p>
+                <p>© 2025 KAFI LAW FIRM.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Tautan Cepat</h3>
+                <ul>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="#team">Tim</a></li>
+                    <li><a href="#testimonials">Testimoni</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#gallery">Galeri</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Bidang Keahlian</h3>
+                <ul>
+                    <li><a href="#">Hukum Perusahaan</a></li>
+                    <li><a href="#">Hukum Ketenagakerjaan</a></li>
+                    <li><a href="#">Hukum Properti</a></li>
+                    <li><a href="#">Hak Kekayaan Intelektual</a></li>
+                    <li><a href="#">Litigasi</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Hubungi Kami</h3>
+                <p><i class="fab fa-whatsapp"></i> 0815 5333 3881</p>
+                <p><i class="fas fa-envelope"></i> kafilawfirm2019@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Komplek PATRA 2, Jakarta Pusat</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>Desain by landingpageproAI</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') { // If href is just '#', scroll to top
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                        return;
+                    }
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Offset for fixed header
+                        const headerOffset = document.querySelector('.header').offsetHeight;
+                        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                        const offsetPosition = elementPosition - headerOffset - 20; // Added extra padding
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+
+                        // Close mobile menu if open
+                        const mainNav = document.querySelector('.main-nav');
+                        const hamburger = document.querySelector('.hamburger');
+                        if (mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            hamburger.classList.remove('active');
+                        }
+                    }
+                });
+            });
+
+            // Active link highlighting on scroll
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.main-nav a');
+
+            function updateActiveLink() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - document.querySelector('.header').offsetHeight;
+                    if (pageYOffset >= sectionTop - 50) { // Adjust -50 for better trigger
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', updateActiveLink);
+            updateActiveLink(); // Call on load to set initial active link
+
+            // Hamburger menu functionality
+            const hamburger = document.querySelector('.hamburger');
+            const mainNav = document.querySelector('.main-nav');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                mainNav.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (event) => {
+                if (!mainNav.contains(event.target) && !hamburger.contains(event.target) && mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+            });
+
+            // FAQ Accordion functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other open FAQ items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.toggle-icon').classList.remove('fa-minus');
+                            otherItem.querySelector('.toggle-icon').classList.add('fa-plus');
+                        }
+                    });
+
+                    // Toggle current FAQ item
+                    item.classList.toggle('active');
+                    const toggleIcon = item.querySelector('.toggle-icon');
+                    if (item.classList.contains('active')) {
+                        toggleIcon.classList.remove('fa-plus');
+                        toggleIcon.classList.add('fa-minus');
+                    } else {
+                        toggleIcon.classList.remove('fa-minus');
+                        toggleIcon.classList.add('fa-plus');
+                    }
+                });
+            });
+
+            // Team Member Description Toggle
+            const toggleButtons = document.querySelectorAll('.team-member .toggle-button');
+
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const fullDescription = this.previousElementSibling; // Gets the .full-description div
+                    if (fullDescription.style.display === 'none' || fullDescription.style.display === '') {
+                        fullDescription.style.display = 'block';
+                        this.textContent = 'Lihat Lebih Sedikit';
+                    } else {
+                        fullDescription.style.display = 'none';
+                        this.textContent = 'Lihat Selengkapnya';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
